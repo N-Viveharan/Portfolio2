@@ -1,0 +1,189 @@
+.window {
+  position: fixed;
+  background: var(--window-bg);
+  backdrop-filter: blur(30px) saturate(200%);
+  -webkit-backdrop-filter: blur(30px) saturate(200%);
+  border: 1px solid var(--window-border);
+  border-radius: 12px;
+  box-shadow: var(--window-shadow);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform-origin: center center;
+  transition: box-shadow 0.2s;
+}
+
+.window:hover {
+  box-shadow:
+    0 36px 90px rgba(0, 0, 0, 0.5),
+    0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Open animation */
+.opening {
+  animation: windowOpen 0.32s cubic-bezier(0.34, 1.4, 0.64, 1) forwards;
+}
+
+@keyframes windowOpen {
+  from {
+    opacity: 0;
+    transform: scale(0.82) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Minimize animation */
+.minimized {
+  animation: windowMinimize 0.28s cubic-bezier(0.4, 0, 1, 1) forwards;
+  pointer-events: none;
+}
+
+@keyframes windowMinimize {
+  from {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.15) translateY(200px);
+  }
+}
+
+/* Maximized — no rounded corners, no border */
+.maximized {
+  border-radius: 0;
+  border: none;
+}
+
+/* ── Title bar ── */
+.titleBar {
+  height: 40px;
+  background: var(--window-header);
+  border-bottom: 1px solid var(--divider);
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  gap: 8px;
+  flex-shrink: 0;
+  cursor: grab;
+  position: relative;
+}
+
+.titleBar:active {
+  cursor: grabbing;
+}
+
+/* Traffic lights */
+.trafficLights {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+}
+
+.light {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: filter 0.15s, transform 0.1s;
+  position: relative;
+}
+
+.light:hover {
+  filter: brightness(0.85);
+  transform: scale(1.15);
+}
+
+.light:active {
+  transform: scale(0.9);
+}
+
+.red    { background: var(--red); }
+.yellow { background: var(--yellow); }
+.green  { background: var(--green); }
+
+/* Symbols revealed on group hover */
+.trafficLights:hover .red::after    { content: '✕'; }
+.trafficLights:hover .yellow::after { content: '−'; }
+.trafficLights:hover .green::after  { content: '+'; }
+
+.light::after {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 1;
+}
+
+/* Centered title */
+.titleInfo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  pointer-events: none;
+}
+
+.titleIcon {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.titleText {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.titleSpacer {
+  flex: 1;
+}
+
+/* ── Scrollable content area ── */
+.content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* ── Resize handle (bottom-right corner) ── */
+.resizeHandle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 18px;
+  height: 18px;
+  cursor: se-resize;
+  background: transparent;
+}
+
+.resizeHandle::after {
+  content: '';
+  position: absolute;
+  bottom: 3px;
+  right: 3px;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid var(--text-tertiary);
+  border-bottom: 2px solid var(--text-tertiary);
+  border-radius: 0 0 2px 0;
+  opacity: 0.4;
+  transition: opacity 0.15s;
+}
+
+.resizeHandle:hover::after {
+  opacity: 0.8;
+}
