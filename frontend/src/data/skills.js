@@ -11,6 +11,7 @@ export const skillCategories = [
       { name: 'Redux / Zustand',   level: 78 },
       { name: 'Responsive Design', level: 85 },
     ],
+    
   },
   {
     id: 'backend',
