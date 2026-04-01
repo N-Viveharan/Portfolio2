@@ -10,10 +10,12 @@ export default function Desktop({ children }) {
   return (
     <div className={styles.desktop}>
 
+
       {/* ── Animated background blobs ── */}
       <div className={styles.blob1} />
       <div className={styles.blob2} />
       <div className={styles.blob3} />
+      
 
       {/* ── Noise texture overlay ── */}
       <div className={styles.noise} />
