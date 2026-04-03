@@ -11,6 +11,8 @@ export default function Desktop({ children }) {
     <div className={styles.desktop}>
 
 
+
+
       {/* ── Animated background blobs ── */}
       <div className={styles.blob1} />
       <div className={styles.blob2} />
