@@ -13,7 +13,7 @@ export function useWindowManager() {
 
 
 
-  
+
   
   /* ── Bring a window to the top of the stack ── */
   const focusWindow = useCallback((id) => {
@@ -36,6 +36,8 @@ export function useWindowManager() {
     });
   }, []);
 
+
+  
   /* ── Close a window completely ── */
   const closeWindow = useCallback((id) => {
     setWindows(w => ({
