@@ -12,6 +12,8 @@ export function useWindowManager() {
   const [topZ,    setTopZ]    = useState(10);
 
 
+
+  
   
   /* ── Bring a window to the top of the stack ── */
   const focusWindow = useCallback((id) => {
