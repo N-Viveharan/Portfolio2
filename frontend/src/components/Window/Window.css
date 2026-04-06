@@ -159,6 +159,8 @@
   overflow-x: hidden;
 }
 
+
+
 /* ── Resize handle (bottom-right corner) ── */
 .resizeHandle {
   position: absolute;
