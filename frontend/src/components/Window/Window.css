@@ -172,6 +172,8 @@
   background: transparent;
 }
 
+
+
 .resizeHandle::after {
   content: '';
   position: absolute;
