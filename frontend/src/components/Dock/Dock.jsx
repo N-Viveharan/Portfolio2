@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from './Dock.module.css';
+import styles from './Dock.css';
 
 const APPS = [
   { id: 'about', label: 'About Me', emoji: '👤', color: '#0071e3' },
