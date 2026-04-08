@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useTheme } from '../../context/ThemeContext';
-import styles from './MenuBar.module.css';
+import styles from './MenuBar.css';
 
 export default function MenuBar() {
   const { theme, toggle } = useTheme();
