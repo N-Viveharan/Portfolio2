@@ -1,4 +1,4 @@
-import styles from './Desktop.module.css';
+import styles from './Desktop.css';
 
 const DESKTOP_ICONS = [
   { label: 'Resume.pdf', emoji: '📄', href: '#' },
