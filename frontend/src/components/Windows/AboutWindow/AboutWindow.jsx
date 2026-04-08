@@ -1,4 +1,4 @@
-import styles from './AboutWindow.module.css';
+import styles from './AboutWindow.css';
 
 export default function AboutWindow() {
   return (
