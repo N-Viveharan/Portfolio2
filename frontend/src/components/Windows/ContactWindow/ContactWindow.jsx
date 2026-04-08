@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from './ContactWindow.module.css';
+import styles from './ContactWindow.css';
 
 export default function ContactWindow() {
   const [form, setForm]     = useState({ name: '', email: '', message: '' });
