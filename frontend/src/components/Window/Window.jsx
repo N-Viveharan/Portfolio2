@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from 'react';
 import { useDrag } from '../../hooks/useDrag';
-import styles from './Window.module.css';
+import styles from './Window.css';
 
 export default function Window({
   id, title, icon, children,
