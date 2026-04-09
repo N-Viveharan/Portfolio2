@@ -211,6 +211,8 @@
   color: color-mix(in srgb, var(--card-accent) 70%, var(--text-tertiary));
 }
 
+
+
 /* ── Responsive ── */
 @media (max-width: 480px) {
   .overviewGrid {
