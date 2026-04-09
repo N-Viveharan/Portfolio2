@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { skillCategories } from '../../../data/skills';
-import styles from './SkillsWindow.module.css';
+import styles from './SkillsWindow.css';
 
 function SkillBar({ name, level, color, animate }) {
   return (
@@ -21,6 +21,7 @@ function SkillBar({ name, level, color, animate }) {
     </div>
   );
 }
+
 
 export default function SkillsWindow() {
   const [active, setActive]   = useState('frontend');
