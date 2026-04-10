@@ -19,6 +19,7 @@ export default function AboutWindow() {
             <span className={styles.badge}>💻 Open to Work</span>
           </div>
         </div>
+        
       </div>
 
       <div className={styles.divider} />
