@@ -23,6 +23,8 @@ export default function Window({
     prevOpen.current = open;
   }, [open]);
 
+  
+
   const handleMaximize = () => {
     if (!isMaximized) {
       setPrevState({ pos: { ...pos }, size: { ...size } });
