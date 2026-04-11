@@ -17,6 +17,8 @@ export default function ContactWindow() {
     }, 1400);
   };
 
+
+  
   return (
     <div className={styles.container}>
 
