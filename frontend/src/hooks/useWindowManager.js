@@ -38,6 +38,8 @@ export function useWindowManager() {
 
 
   
+
+  
   /* ── Close a window completely ── */
   const closeWindow = useCallback((id) => {
     setWindows(w => ({
