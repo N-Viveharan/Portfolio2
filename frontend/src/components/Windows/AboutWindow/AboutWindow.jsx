@@ -21,6 +21,7 @@ export default function AboutWindow() {
         </div>
           
           
+          
       </div>
 
       <div className={styles.divider} />
