@@ -125,5 +125,7 @@ input, textarea { font-family: var(--font-primary); outline: none; }
 a { text-decoration: none; color: inherit; }
 
 
+
+
 /* Allow text selection only inside window content */
 .selectable { user-select: text; }
