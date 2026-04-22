@@ -90,6 +90,8 @@
   box-shadow: 0 0 4px rgba(255, 189, 46, 0.6);
 }
 
+
+
 @media (max-width: 600px) {
   .dock {
     gap: 8px;
