@@ -20,6 +20,8 @@ export default function Dock({ windows, onToggle }) {
     return 1;
   };
 
+  
+
   const getTranslateY = (idx) => {
     if (hoveredIdx === null) return 0;
     const dist = Math.abs(idx - hoveredIdx);
