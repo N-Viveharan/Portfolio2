@@ -23,6 +23,8 @@ function SkillBar({ name, level, color, animate }) {
 }
 
 
+
+
 export default function SkillsWindow() {
   const [active, setActive]   = useState('frontend');
   const [animate, setAnimate] = useState(false);
