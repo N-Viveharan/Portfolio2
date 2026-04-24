@@ -10,6 +10,8 @@ import SkillsWindow         from './components/Windows/SkillsWindow/SkillsWindow
 import ContactWindow        from './components/Windows/ContactWindow/ContactWindow';
 import './styles/global.css';
 
+
+
 /* ── Per-window defaults ── */
 const WINDOW_CONFIG = {
   about: {
