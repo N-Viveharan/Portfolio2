@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from 'react';
 import { skillCategories } from '../../../data/skills';
 import styles from './SkillsWindow.css';
 
+
+
 function SkillBar({ name, level, color, animate }) {
   return (
     <div className={styles.skillRow}>
