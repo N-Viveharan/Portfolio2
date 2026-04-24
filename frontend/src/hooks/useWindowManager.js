@@ -36,10 +36,6 @@ export function useWindowManager() {
     });
   }, []);
 
-
-  
-
-  
   /* ── Close a window completely ── */
   const closeWindow = useCallback((id) => {
     setWindows(w => ({
@@ -74,6 +70,8 @@ export function useWindowManager() {
         return prev; // interim return; real update happens in setTopZ cb
       }
 
+
+      
       // Open but minimised → restore and bring to front
       if (win.minimized) {
         setTopZ(z => {
