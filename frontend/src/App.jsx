@@ -88,6 +88,8 @@ function Portfolio() {
   );
 }
 
+
+
 /* ── Root export wraps everything in ThemeProvider ── */
 export default function App() {
   return (
