@@ -4,6 +4,8 @@ import styles from './SkillsWindow.css';
 
 
 
+
+
 function SkillBar({ name, level, color, animate }) {
   return (
     <div className={styles.skillRow}>
